@@ -1,0 +1,277 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+
+	background-color:#C63D0F;
+	margin:0;
+	 overflow-x: hidden;
+	 padding-left: 3%;
+	 padding-right: 3%;
+
+}
+.btn-front
+{
+margin-right:2em;
+background-color:#333;
+color:white;
+}
+.btn-viz
+{
+	margin-right:2em;
+	background-color:#063;
+	color:white;
+
+}
+.row
+{
+	padding: 15px;
+}
+.btn-back
+{
+	background-color:#3B3738;
+	color:white;
+
+}
+.jum
+{
+
+	background-color:#333;
+}
+.introdction
+{
+
+	margin-left:1em;
+	margin-right:1em;
+	font-family: 'Lora', serif;
+	font-size:15px;
+}
+
+.a
+{
+	background-color:#333;
+	color:white;
+	opacity:0.8;
+}
+a{
+	color:white;
+}
+.nav
+{
+
+border-bottom:groove;
+font-family: 'Sanchez', serif;
+
+
+}
+.backend
+{
+	background-color:#3B3738;
+}
+
+.profile
+{
+	margin-top:2em;
+
+}
+.name
+{
+	background-color:#333;
+	margin-left:2em;
+	margin-right:2em;
+	border-radius:0px 0px 10px 10px;
+}
+.name-inverse
+{
+	background-color:#333;
+	margin-left:2em;
+	margin-right:2em;
+	border-radius:10px 10px 0px 0px white;
+}
+.main
+{
+	padding:0;
+	width:auto;
+	height:auto;
+	background-color:#FDF3E7;
+	border-top:thick;
+	 font-family: 'Play', sans-serif;
+
+}
+.table-color
+{
+	background-color:#3B3738;
+
+}
+.intro
+{
+	background:#333;
+	color:white;
+}
+.graduate
+{
+	float:right;
+	font-style: italic;
+}
+.biodata
+{
+	margin-top:2em;
+	margin-left:2em;
+}
+.nav a{
+	color:orange;
+	border: none !important;
+}
+.nav a:hover{
+	background-color:transparent !important;
+	border:none !important;
+	color:white !important;
+
+}
+.btn-primary
+{
+	background-color: #333333 !important;
+	color: orange;
+	border: 0px;
+}
+.thumbnail
+{
+		box-shadow: 0px 0px 10px black;
+}
+.thumbnail:hover
+{
+		box-shadow: 0px 0px 25px black;
+}
+.skills
+{
+	margin-left:5px;
+	border-color:skyblue;
+	border-left-style:outset;;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+	.thumbnail
+	{
+		height: 440px;
+	}
+
+body{
+	margin-top: 25px;
+}
+	.nav-tabs
+	{
+		margin-top:-38px;
+		width:100%;
+		position: absolute;
+		border: 0px;
+	}
+
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.thumbnail
+{
+	height: 470px;
+}
+
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+}
+
+.main
+{
+	padding:0;
+	margin-top:1%;
+	margin-left:auto;
+	margin-right: auto;
+	width:100%;
+	height:auto;
+	background-color:white;
+	border-top:thick;
+	box-shadow: 0px 0px 15px black;
+
+
+}
+.nav-tabs
+{
+   margin-top:-43px;
+
+}
+.nav-tabs:hover
+{
+   margin-top:-43px;
+
+}
+.work
+{
+	margin-left: 45px;
+}
