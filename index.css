@@ -1,6 +1,28 @@
 @charset "utf-8";
 /* CSS Document */
-
+.fe
+{
+	width: 28px;
+    height: 28px;
+    margin-right: -20px;
+    display: inline-block;
+    color: orange;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background:#333;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 16px;
+    position: relative;
+    top: -2px;
+		left:-20px;
+}
 body
 {
 
@@ -129,6 +151,13 @@ font-family: 'Sanchez', serif;
 	color:white !important;
 
 }
+.nav .active a:hover{
+	background-color:white !important;
+	border:none !important;
+	color:#333 !important;
+
+}
+
 .btn-primary
 {
 	background-color: #333333 !important;
@@ -146,8 +175,9 @@ font-family: 'Sanchez', serif;
 .skills
 {
 	margin-left:5px;
-	border-color:skyblue;
+	padding-left: 27px;
 	border-left-style:outset;;
+
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -261,6 +291,7 @@ and (orientation : portrait) {
 
 
 }
+
 .nav-tabs
 {
    margin-top:-43px;
@@ -274,4 +305,11 @@ and (orientation : portrait) {
 .work
 {
 	margin-left: 45px;
+}
+.title
+{
+	text-transform: uppercase;
+	font-size: 18px;
+	color:#333;
+
 }
