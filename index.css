@@ -1,7 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
-
-
+.social a
+{
+color:#333;
+}
+.social a:hover
+{
+color:black;
+}
 .fe
 {
 	width: 28px;
