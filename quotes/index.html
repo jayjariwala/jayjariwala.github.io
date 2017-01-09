@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Random Quote Machine</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+	function colorchange()
+	{
+	var colors=["aqua","orange","teal","olive","crimson","lime","magenta","blue green","fuschia","green","salmon"];
+	var randomNumber=Math.floor((Math.random()*10) + 1);
+	$("body").css("background-color",colors[randomNumber]);
+	}
+
+	$("document").ready(function(e) {
+                $.getJSON("https://api.myjson.com/bins/4kgxi",function(data){
+				var items=[data];
+				var randomeNumber=Math.floor((Math.random()*50) + 1);
+				$(".text").html("\""+items[0][randomeNumber].quote+"\"")
+				$(".author").html("-"+items[0][randomeNumber].Author);
+
+
+				$(".btn").click(function(){
+					 randomeNumber=Math.floor((Math.random()*52) + 1);
+
+						$(".text").html("").fadeOut();
+
+						$(".text").html("\""+items[0][randomeNumber].quote+"\"").fadeIn("slow");
+
+						$(".author").html("-"+items[0][randomeNumber].Author);
+
+					});
+
+					$(".twitter").click(function(){
+							window.location.href="http://twitter.com/home?status="+items[0][randomeNumber].quote+"-"+items[0][randomeNumber].Author;
+
+							});
+				});
+            });
+
+	</script>
+  </head>
+  <body>
+
+
+
+    <!---- Dont do anything above this code-->
+    <div class="container container-fluid">
+    	<div class="eveything">
+        <div class="quoteContainer">
+       	 <h1><b><p class="text text-center"> </p></b></h1>
+         </div><br/>
+
+        <h3> <div class="author text-center">
+
+        </div></h3><br/>
+    	<div class="button">
+			<center>
+            <ul>
+            <li><button class="btn btn-default text-center" onClick="colorchange()">Next Quote</button></li>
+            <li><button class="twitter" ><i class=" fa fa-twitter">Tweet</i></button> </li>
+    		</ul>
+            </center>
+
+
+
+        </div>
+        
+
+
+    </div>
+
+
+
+
+  </body>
+</html>

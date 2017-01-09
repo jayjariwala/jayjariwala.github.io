@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+     <link rel="icon" href="img/logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Wiki Hunt</title>
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kadwa' rel='stylesheet' type='text/css'>
+    <link href="font-awesome-4.6.3/css/font-awesome.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+   
+
+    <script>
+
+    
+
+    function searchresult()
+    {
+        
+      console.log("It is called")
+      var searchvalue = $('.search').val();
+
+      console.log(searchvalue);
+
+        $.ajax({
+        type: "GET",
+        url: "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=&list=search&titles="+searchvalue+"&srsearch="+searchvalue,
+        dataType: "jsonp",
+        success: function(jsonData){
+        
+
+        var item=[jsonData];
+        console.log(item);
+        var title=[];
+        var description=[];
+        for(var i=0;i<10;i++)
+        {
+        title[i]=item[0].query.search[i].title;
+        description[i]=item[0].query.search[i].snippet;
+        }
+        $(".result").html("");
+        $(".result").fadeIn(1000);
+      
+       for(var i=0;i<10;i++)
+       {
+
+        
+        $(".result").append("<a href='https://en.wikipedia.org/wiki/"+title[i]+"' target='_blank' class='list-group-item'><div class='row'><div class='col-lg-1'></div> <div class='col-lg-2'><h4>"+title[i]+"</h4></div><div class='col-lg-7'><i>"+description[i]+"</i></div></div></a>");
+
+        $(".list-group-item").fadeIn(1000);
+       }
+
+       
+     
+        console.log(title[1]);
+        console.log(description[1]);
+    },
+    error: function(){
+         alert("Could not retrieve data.");
+    }
+ });
+
+
+
+   
+
+
+    }
+
+
+
+
+     $(document).ready(function(){
+      
+
+
+
+        $("form").submit(function(e){
+        e.preventDefault();
+        });
+     
+      
+
+
+});
+    </script>
+  
+ 
+  </head>
+  <body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  
+  <br/>
+
+  <div class="container">
+
+
+<center><img src="img/logo.png"></center>
+<center><h1>WikiHunt</h1></center>
+<center><h3><i>Search Wikipeadia Articles</i></h3></center>
+
+<center><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><button class="btn-primary"><i class="fa fa-random"></i> Search Random</button> </a></center>
+
+
+<br/>
+<br/>
+
+<form method="get" id="target">
+  
+  
+   <div class="col-lg-10">
+  <input id="textinput" name="textinput" type="text" placeholder="Search Here" class="form-control input-md search" required>
+  </div>
+  <div class="col-lg-2">
+<button class="btn btn-block " style="background-color:#DA9404" id="go" style="color:black" onclick="searchresult()" >Search</button>
+  </div>
+</form> <br/><br/>
+
+<br/>
+
+<div class="result">
+ 
+
+
+</div>
+<br/>
+<br/>
+<center><h4>Designed & Developed by Jay Jariwala</h4></center>
+</div>
+</body>
+</html>

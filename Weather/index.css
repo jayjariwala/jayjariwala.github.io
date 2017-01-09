@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	background:url('img/DayClearSky.jpg') center center no-repeat fixed;
+	background-size:cover;
+	color:white;
+font-family: 'Rajdhani', sans-serif;
+font-style: italic;
+}
+.grid
+{
+
+	margin-bottom:10px;
+	opacity:0.9;
+	color:white;
+	font-family: 'Rajdhani', sans-serif;
+
+	border:none;
+	margin:5px;
+	margin-left:-20px;
+
+}
+
+.container-fluid
+{	margin-left:5%;
+	margin-right::5%;
+}
+.btn
+{
+	height:30px;
+	width:50px;
+	color:black;
+	background-color:orange;
+	border:#000;
+	float:right;
+	padding-right:50px;
+	font-size:13px;
+}
+.btn:hover
+{
+	background-color:gray;
+	color:white;
+}
+.row
+{
+	margin-top:120px;
+}
+.box1
+{
+	font-size:35px;
+	background-color:black;
+	padding-top:15px;
+
+
+}
+.box2
+{
+	font-size:35px;
+	background-color:black;
+	padding-left:40px;
+	padding-top:25px;
+}
+.box3
+{
+	background-color:black;
+	font-size:25px;
+}
+.box4
+{
+	background-color:black;
+	font-size:25px;
+}
+.box5
+{
+	background-color:black;
+	font-size:25px;
+}

@@ -1,0 +1,42 @@
+
+.twitch
+{
+	height: 180px;
+	background-color: black;
+	margin-top: 50px;
+	border-radius:50px;
+	color: white;
+	opacity: 0.7;
+    padding-top:10px;
+
+}
+body
+{
+ font-family: 'Alegreya Sans', sans-serif;
+}
+.online
+{
+     border:groove;
+    border-color:green;
+}
+.offline
+{
+     border:groove;
+    border-color:red;
+}
+.disabled
+{
+     border:groove;
+    border-color:gray;
+}
+.twitch-online:hover{
+    background-color:green;
+}
+.twitch-offline:hover{
+    background-color:red;
+    opacity:0.3;
+}
+.twitch-disabled:hover{
+    background-color:gray;
+    opacity:0.3;
+}

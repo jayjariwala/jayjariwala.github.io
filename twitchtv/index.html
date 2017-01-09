@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Twitch TV</title>
+    <!-- Bootstrap -->
+        <link rel="icon" href="img/tw.jpeg">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+              <!-- Include all compiled plugins (below), or include individual files as needed -->
+              <script src="js/bootstrap.min.js"></script>
+
+
+              <script>
+              $("Document").ready(function(){
+
+
+              		 var streamers=["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas","brunofin","comster404"];
+                  var errorarray = [];
+
+
+
+              		 	  $(".data").html("");
+                  streamers.forEach(function (arrayelement) {
+
+                      var post_url = "https://api.twitch.tv/kraken/streams/" + arrayelement;
+
+                     
+                      $.ajax({
+                          type: "GET",
+                          url: post_url,
+                          dataType: "jsonp",
+                          success: function (jsonData) {
+
+                              var object = [jsonData];
+                              console.log(object);
+
+                              var status = object[0].status;
+                              var stream = object[0].stream;
+
+                             
+                              if (status==422)
+                              {
+                                  $(".data").append("<div class='col-lg-6'><div class='twitch disabled twitch-disabled'><center> <img src='img/disable.png' height='100px;' width='100px;' class='img img-circle img-responsive' style='border:groove;border-color:white;'></center><center><span class='text' style='font-size:20px;margin-left:20px;'>" + arrayelement + "</span> <br /></center><center><i>Account Disabled</i></center></div></div>");
+                              }
+                              else
+                              {
+                                  if (stream == null)
+                                  {
+                                      $(".data").append("<a href='https://www.twitch.tv/"+arrayelement+"' target='_blank'><div class='col-lg-6'><div class='twitch offline twitch-offline'><center> <img src='img/user.png' height='100px;' width='100px;' class='img img-circle img-responsive' style='border:groove;border-color:white;'></center><center><span class='text' style='font-size:20px;margin-left:20px;'>" + arrayelement + "</span> <br /></center><center><i class='fa fa-circle' style='color:red'></i> <i>Offline</i></center></div></div></a>");
+                                  }
+                                  else
+                                  {
+                                      var logo = object[0].stream.channel.logo;
+                                      var status = object[0].stream.channel.status;
+                                      $(".data").append("<a href='https://www.twitch.tv/" + arrayelement + "' target='_blank'><div class='col-lg-6'><div class='twitch online twitch-online'><center><img src='" + logo + "' height='100px;' width='100px;' class='img img-circle img-responsive' style='border:groove;border-color:white;'></center><center><span class='text' style='font-size:20px;margin-left:20px;'>" + arrayelement + "</span> <br /><i class='fa fa-circle' style='color:green'></i><i> Online</i></center><marquee><p>" + status + "<p></marquee></div></div></a>");
+                                  }
+
+                                  }
+
+                          },
+                          error: function () {
+                              console.log("User not found");
+                          }
+                    
+                      });
+
+
+
+                  });
+
+
+              		
+              		 $("#all").click(function(){
+
+              		 	  $(".data").html("");
+                  streamers.forEach(function (arrayelement) {
+
+                      var post_url = "https://api.twitch.tv/kraken/streams/" + arrayelement;
+
+                     
+                      $.ajax({
+                          type: "GET",
+                          url: post_url,
+                          dataType: "jsonp",
+                          success: function (jsonData) {
+
+                              var object = [jsonData];
+                              console.log(object);
+
+                              var status = object[0].status;
+                              var stream = object[0].stream;
+
+                             
+                              if (status==422)
+                              {
+                                  $(".data").append("<div class='col-lg-6'><div class='twitch disabled twitch-disabled'><center> <img src='img/disable.png' height='100px;' width='100px;' class='img img-circle img-responsive' style='border:groove;border-color:white;'></center><center><span class='text' style='font-size:20px;margin-left:20px;'>" + arrayelement + "</span> <br /></center><center><i>Account Disabled</i></center></div></div>");
+                              }
+                              else
+                              {
+                                  if (stream == null)
+                                  {
+                                      $(".data").append("<a href='https://www.twitch.tv/"+arrayelement+"' target='_blank'><div class='col-lg-6'><div class='twitch offline twitch-offline'><center> <img src='img/user.png' height='100px;' width='100px;' class='img img-circle img-responsive' style='border:groove;border-color:white;'></center><center><span class='text' style='font-size:20px;margin-left:20px;'>" + arrayelement + "</span> <br /></center><center><i class='fa fa-circle' style='color:red'></i> <i>Offline</i></center></div></div></a>");
+                                  }
+                                  else
+                                  {
+                                      var logo = object[0].stream.channel.logo;
+                                      var status = object[0].stream.channel.status;
+                                      $(".data").append("<a href='https://www.twitch.tv/" + arrayelement + "' target='_blank'><div class='col-lg-6'><div class='twitch online twitch-online'><center><img src='" + logo + "' height='100px;' width='100px;' class='img img-circle img-responsive' style='border:groove;border-color:white;'></center><center><span class='text' style='font-size:20px;margin-left:20px;'>" + arrayelement + "</span> <br /><i class='fa fa-circle' style='color:green'></i><i> Online</i></center><marquee><p>" + status + "<p></marquee></div></div></a>");
+                                  }
+
+                                  }
+
+                          },
+                          error: function () {
+                              console.log("User not found");
+                          }
+                    
+                      });
+
+
+
+                  });
+                 
+
+
+
+
+
+              		});
+
+              		$("#online").click(function(){
+
+					$(".data").html("");
+                  streamers.forEach(function (arrayelement) {
+
+                      var post_url = "https://api.twitch.tv/kraken/streams/" + arrayelement;
+
+                     
+                      $.ajax({
+                          type: "GET",
+                          url: post_url,
+                          dataType: "jsonp",
+                          success: function (jsonData) {
+
+                              var object = [jsonData];
+                              console.log(object);
+
+                              var status = object[0].status;
+                              var stream = object[0].stream;
+
+              		
+
+
+                            
+                             
+                              if (status==422)
+                              {
+                                 
+                              }
+                              else
+                              {
+                                  if (stream == null)
+                                  {
+                                      
+                                  }
+                                  else
+                                  {
+                                      var logo = object[0].stream.channel.logo;
+                                      var status = object[0].stream.channel.status;
+                                      $(".data").append("<a href='https://www.twitch.tv/" + arrayelement + "' target='_blank'><div class='col-lg-6'><div class='twitch online twitch-online'><center><img src='" + logo + "' height='100px;' width='100px;' class='img img-circle img-responsive' style='border:groove;border-color:white;'></center><center><span class='text' style='font-size:20px;margin-left:20px;'>" + arrayelement + "</span> <br /><i class='fa fa-circle' style='color:green'></i><i> Online</i></center><marquee><p>" + status + "<p></marquee></div></div></a>");
+                                  }
+
+                                  }
+
+                          },
+                          error: function () {
+                              console.log("User not found");
+                          }
+                    
+                      });
+
+
+
+                  });
+                 
+
+
+
+              			
+              			
+              			 
+
+              		});
+
+              		$("#offline").click(function(){
+              			 	$(".data").html("");
+ 
+                  streamers.forEach(function (arrayelement) {
+
+                      var post_url = "https://api.twitch.tv/kraken/streams/" + arrayelement;
+
+                     
+                      $.ajax({
+                          type: "GET",
+                          url: post_url,
+                          dataType: "jsonp",
+                          success: function (jsonData) {
+
+                              var object = [jsonData];
+                              console.log(object);
+
+                              var status = object[0].status;
+                              var stream = object[0].stream;
+
+              		
+
+
+                            
+                             
+                              if (status==422)
+                              {
+                                  
+                              }
+                              else
+                              {
+                                  if (stream == null)
+                                  {
+                                      $(".data").append("<a href='https://www.twitch.tv/"+arrayelement+"' target='_blank'><div class='col-lg-6'><div class='twitch offline twitch-offline'><center> <img src='img/user.png' height='100px;' width='100px;' class='img img-circle img-responsive' style='border:groove;border-color:white;'></center><center><span class='text' style='font-size:20px;margin-left:20px;'>" + arrayelement + "</span> <br /></center><center><i class='fa fa-circle' style='color:red'></i> <i>Offline</i></center></div></div></a>");
+                                  }
+                                  
+
+                                  }
+
+                          },
+                          error: function () {
+                              console.log("User not found");
+                          }
+                    
+                      });
+
+
+
+                  });
+                 
+
+
+
+              		});
+		
+
+                
+
+
+
+              });
+
+
+
+
+              </script>
+          </head>
+ 	 <body background='img/background.jpg'>
+ 	 <center><img src="img/twitch.png" class="img img-responsive" width="300px;" height="50px;" "><span style="font-size:30px;color:white;">Streamers</span></center>
+ 		 <div class="container">
+ 			 <div class="row">
+ 	 			<div class="col-lg-4">
+ 	 			<button class="btn btn-block btn-primary" id="all"><i class="fa fa-star" style="color:yellow;"></i> All</button>
+ 	 			</div>
+ 	 			<div class="col-lg-4">
+ 	 			<button class="btn btn-block btn-primary" id="online"><i class="fa fa-circle" style="color:lightgreen;"></i> Online</button>
+ 	 			</div>
+ 	 			<div class="col-lg-4">
+ 	 			<button class="btn btn-block btn-primary" id="offline"><i class="fa fa-circle" style="color:red;"></i> Offline</button>
+ 	 			</div>
+ 	 		<div class="row">
+
+                  <div class="data">
+ 	 		
+                  </div>
+
+ 	 		</div>
+
+ 	 </div>
+     </div>
+          <br/>
+          <br/>
+  	</body>
+</html>

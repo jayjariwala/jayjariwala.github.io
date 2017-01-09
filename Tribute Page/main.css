@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+background-color:#E7E7E7;
+	
+}
+.content
+{
+	margin-top:3%;
+	margin-left:5%;
+	margin-right:5%;
+	font-family:convergence;
+	border:groove;
+	border-color:#3C9DFF;
+	border-radius:0px 200px;
+	
+
+	
+}
+.name
+{
+	font-family:cinzel;
+
+}
+.pic
+{
+	position:relative;
+	left:3px;
+	right:15px;	
+}
+.timeline
+{
+	margin-left:10%;
+}
+.footer
+{
+	margin-left:5%;
+	margin-right:5%;
+	height:3px;
+	background-color:#5B5BFF;
+	
+}
+.me
+{
+	font-family:Dosis;
+}

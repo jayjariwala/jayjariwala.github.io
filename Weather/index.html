@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WeatherApp</title>
+    <!-- Bootstrap -->
+        <link rel="icon" href="img/icon.png">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet' type='text/css'>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <script>
+   var loc;
+    $( document ).ready(function() {
+      $.getJSON('http://ipinfo.io', function(location){
+        loc=location.loc;
+
+
+        var city,area,state,country;
+          $.getJSON("http://maps.googleapis.com/maps/api/geocode/json?latlng="+loc+"&sensor=false",function(data){
+         var items=[data];
+         city=""+items[0].results[0].address_components[2].long_name;
+         area=""+items[0].results[0].address_components[3].long_name;
+         state=""+items[0].results[0].address_components[4].short_name;
+         country=""+items[0].results[0].address_components[5].short_name;
+
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+city+","+country+"&appid=5ec3cc221865dae961de345a0ca59303",function(data){
+          var items=[data];
+          var weather=""+items[0].coord.lat;
+          var main=""+items[0].weather[0].main;
+          var mainid=""+items[0].weather[0].id;
+          var mainicon=""+items[0].weather[0].icon;
+          var maindes=""+items[0].weather[0].description;
+          var temp=""+items[0].main.temp;
+          var mintemp=""+items[0].main.temp_min;
+          var maxtemp=""+items[0].main.temp_max;
+          var pressure=""+items[0].main.pressure;
+          var humidity=""+items[0].main.humidity;
+          var wind=""+items[0].wind.speed;
+          var windDegree=""+items[0].wind.deg;
+
+          var dt=""+items[0].dt;
+          var d =new Date();
+          var date=d.getDate();
+          var month=d.getMonth()+1;
+          var year=d.getFullYear();
+
+          function timefunction()
+          {
+          var d =new Date();
+          $(".time").html("");
+          var mintutes=d.getMinutes();
+          var hour=d.getHours();
+          var second=d.getSeconds();
+
+
+          $(".time").html(""+hour+":"+mintutes+":"+second);
+          setTimeout(function()
+          {
+            timefunction();
+          },1000);
+          }
+          $(".temp").html(""+Math.floor(temp *9/5 - 459.67)+"F&deg;");
+          timefunction();
+          $(".day").html(""+main);
+          console.log(mainicon);
+          $(".icon").html("<img src=http://openweathermap.org/img/w/"+mainicon+".png width='100'> &nbsp;"+maindes);
+
+          $(".max-temp").html(""+Math.floor(maxtemp*9/5 - 459.67)+"F&deg;");
+          $(".min-temp").html(""+Math.floor(mintemp*9/5 - 459.67)+"F&deg;");
+          $(".pressure").html(""+pressure);
+          $(".humidity").html(""+humidity);
+          $(".wind-speed").html(""+wind);
+
+          $(".place").html(""+area+","+city+","+state+","+country);
+          $(".degree").html(""+month+"/"+date+"/"+year);
+
+
+
+
+          $(".btn").click(function(f){
+              if($(".btn").text()=="Celsius")
+              {
+                $(".temp").html(""+Math.floor(temp - 273.15)+"C&deg;");
+                $(".max-temp").html(""+Math.floor(maxtemp- 273.15)+"C&deg;");
+                $(".min-temp").html(""+Math.floor(mintemp- 273.15)+"C&deg;");
+                $(".btn").html("<b>Fahren</b>")
+              }
+              else
+              {
+                $(".temp").html(""+Math.floor(mintemp*9/5 - 459.67)+"F&deg;");
+                $(".max-temp").html(""+Math.floor(maxtemp*9/5 - 459.67)+"F&deg;");
+                $(".min-temp").html(""+Math.floor(mintemp*9/5 - 459.67)+"F&deg;");
+                $(".btn").html("<b>Celsius</b>")
+              }
+
+            });
+
+        });
+
+        });
+
+
+    })
+  });
+
+
+
+
+
+</script>
+  </head>
+ 	 <body>
+
+		<div class="container-fluid">
+      		<div class="row">
+            	<div class="col-lg-6"><div class="grid align1 box1 well"><center> It Feels like.. <button class="btn btn-default"><b>Celsius</b></button></center><center><img src="Icons/temperature-2-xxl.png" height="40px" width="40px;" style="margin-bottom:40px;"></img><span style="font-size:71px;"><span class="temp">-</span></span> &nbsp;  <span class="time">-</span></center></div></div>
+                <div class="col-lg-6"><div class="grid align2 box2 well"><span class="day">-</span> &nbsp;&nbsp;<span class="icon" ><img src="img/10d.png" class="icon" width="100px;"></span><br/> <span class="place"> - </span></div></div></div>
+                <div class="col-lg-4"><div class="grid align2 box3 well"><img src="img/up.png" height="25px" width="25px"> &nbsp;Max Temp: &nbsp;<span class="max-temp">-&deg;F </span> <br/><img src="img/down.png" height="25px" width="25px"> &nbsp; Min Temp: &nbsp;<span class="min-temp">-&deg;F</span> </div></div>
+                <div class="col-lg-4 "><div class="grid align2 box4 well"><img src="img/pressure.png" height="25px" width="25px"> &nbsp;Pressure: &nbsp;<span class="pressure">-</span> hPA<br/> <img src="img/Humidity-icon.png" height="25px" width="25px"> &nbsp;Humidity: &nbsp;<span class="humidity">-</span>%</div></div>
+                <div class="col-lg-4 "><div class="grid align2 box5 well"><img src="img/yellow-speed-512.png" height="25px" width="25px"> &nbsp;Wind Speed: &nbsp;<span class="wind-speed">-</span>m/s<br/><img src="img/icon-360grados.png" height="25px" width="25px"> &nbsp; Date: &nbsp;<span class="degree">-</span></div></div>
+
+
+
+
+            </div>
+            <br/>
+            <center>Designed and Developed by<br/>Jay Jariwala</center>
+
+
+        </div>
+
+  	</body>
+</html>

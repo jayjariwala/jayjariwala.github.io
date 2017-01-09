@@ -1,0 +1,29 @@
+body
+{
+  color:#453624;
+  background-color: #C0C0C0;
+  font-family: 'Kadwa', serif;
+}
+h1
+{
+  font-size:50px;
+}
+.list-group-item
+{
+
+  border:thin;
+  
+  padding: 8px;
+  margin:10px;
+  background-color:white;
+  
+  box-shadow: 10px 10px 5px black;
+ 
+
+}
+.list-group-item:hover
+{
+border-left: ridge;
+  border-left-color: gold;
+  border-left-width: 20px;
+}
