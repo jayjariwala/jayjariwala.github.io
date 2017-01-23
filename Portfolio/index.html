@@ -5,18 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../img/jlogo.png">
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90426553-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Jay Jariwala</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
-$(function() {
-   $("#one").addClass("progress-bar-purple");
-   $("#two").addClass("progress-bar-orange");
+$(document).ready(function(){
+  var random = Math.floor((Math.random() * 10) + 1);
+  var effect=['rotateIn','rotateInUpLeft','rotateInUpRight','zoomIn','rollIn','bounce','pulse','shake','swing','tada','wobble']
+      $('.animated').addClass(effect[random]);
+
+
+
+
+
 });
+
+
+
 </script>
+
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../index.css" rel="stylesheet">
+
     <link href="../font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
     <link href="../css/animate.css" rel="stylesheet">
@@ -92,7 +114,7 @@ $(function() {
     <br/>
   -->
 <br/>
-<b>Note:</b> For Dynamic Applications opened on Openshift there may short delay while the app is taken out of 'sleep mode'.
+<b>Note:</b> For Dynamic Applications opened on Openshift/Heroku there may short delay while the app is taken out of 'sleep mode'.
 
 </div>
 
@@ -100,7 +122,21 @@ $(function() {
 
 <div class="row">
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated" >
+    <div class="thumbnail"  >
+      <img src="../img/book.jpg" alt="..." >
+      <div class="caption">
+        <h3>Book Trading Club</h3>
+        <p> Book Trading Club is a place where you can trade your books with other people.
+         Uses the Google Books API to allow users to search and add books for trade.</p> <p>
+          Technology: <span class="badge">Node.js</span> <span class="badge">Express.js</span> <span class="badge">Mongodb</span> <span class="badge">Googl Book-API</span> <span class="badge">Html/CSS</span> <span class="badge">Bootstrap</span> <span class="badge">jQuery</span>
+        </p>
+        <p><a href="https://bookwormclub.herokuapp.com/" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/Bookworm" class="btn btn-default" target="_blank"  role="button">Source Code</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/loltrest.png" alt="..." >
       <div class="caption">
@@ -116,7 +152,7 @@ pictures </p> <p>
     </div>
   </div>
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/voteitup.png" alt="..." >
       <div class="caption">
@@ -131,7 +167,7 @@ using Google Pie Charts. </p> <p>
     </div>
   </div>
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/stock.png" alt="..." >
       <div class="caption">
@@ -144,7 +180,7 @@ using Google Pie Charts. </p> <p>
     </div>
   </div>
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/NightLife.png" alt="...">
       <div class="caption">
@@ -161,7 +197,7 @@ using Google Pie Charts. </p> <p>
 
 
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/todo.png" alt="...">
       <div class="caption">
@@ -177,7 +213,7 @@ using Google Pie Charts. </p> <p>
   </div>
 
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/AlumniNetwork.png" alt="...">
       <div class="caption">
@@ -191,7 +227,7 @@ using Google Pie Charts. </p> <p>
     </div>
   </div>
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/url_short.png" alt="...">
       <div class="caption">
@@ -204,7 +240,7 @@ using Google Pie Charts. </p> <p>
     </div>
   </div>
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/imgsearch.png" alt="...">
       <div class="caption">
@@ -220,7 +256,7 @@ using Google Pie Charts. </p> <p>
 
 
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/RandomQuote.png" alt="...">
       <div class="caption">
@@ -230,13 +266,13 @@ using Google Pie Charts. </p> <p>
 
           <br/>
 
-     <p><a href="/quotes" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/RandomQuoteMachine" target="_blank" class="btn btn-default" role="button">Source Code</a></p>
+     <p><a href="http://jayjariwala.com/quotes" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/RandomQuoteMachine" target="_blank" class="btn btn-default" role="button">Source Code</a></p>
       </div>
     </div>
   </div>
 
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/WikiViewer.png" alt="...">
       <div class="caption">
@@ -245,13 +281,13 @@ using Google Pie Charts. </p> <p>
         Technology: <span class="badge">WikiMediaAPI</span> <span class="badge">JQuery</span> <span class="badge">html</span> <span class="badge">css</span> <br/>
 
       </br/>
-        <p><a href="/WikiHunt" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/wikihunt" class="btn btn-default" target="_blank" role="button">Source code</a></p>
+        <p><a href="http://jayjariwala.com/WikiHunt" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/wikihunt" class="btn btn-default" target="_blank" role="button">Source code</a></p>
       </div>
     </div>
   </div>
 
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/Timestamp.jpg" alt="...">
       <div class="caption">
@@ -265,7 +301,7 @@ using Google Pie Charts. </p> <p>
   </div>
 
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/Weather.png" alt="...">
       <div class="caption">
@@ -273,14 +309,14 @@ using Google Pie Charts. </p> <p>
         <p>Application which shows current weather according to user's geolocation</p>
         Technology: <span class="badge">JavaScript</span> <span class="badge">jQuery</span> <span class="badge">html</span> <span class="badge">bootstrap</span> <br/>
         <br/>
-      <p><a href="/Weather" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/WeatherApp" target="_blank" class="btn btn-default" role="button">Source Code</a></p>
+      <p><a href="http://jayjariwala.com/Weather" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/WeatherApp" target="_blank" class="btn btn-default" role="button">Source Code</a></p>
       </div>
     </div>
   </div>
 
 
 
-  <div class="col-sm-6 col-md-4 col-lg-4">
+  <div class="col-sm-6 col-md-4 col-lg-4 animated">
     <div class="thumbnail">
       <img src="../img/TwitchTv.png" alt="...">
       <div class="caption">
@@ -288,14 +324,14 @@ using Google Pie Charts. </p> <p>
         <p>See Which Twitch Tv Streamers are currently Streaming</p>
         Technology: <span class="badge">TwitchTv API</span> <span class="badge">JQuery</span> <span class="badge">html</span> <span class="badge">css</span> <br/>
         <br/>
-      <p><a href="/twitchtv" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/twitchTV" target="https://github.com/jayjariwala/twitchTV" class="btn btn-default" role="button">Source Code</a></p>
+      <p><a href="http://jayjariwala.com/twitchtv" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/twitchTV" target="https://github.com/jayjariwala/twitchTV" class="btn btn-default" role="button">Source Code</a></p>
       </div>
     </div>
   </div>
 
 
 
-    <div class="col-sm-6 col-md-4 col-lg-4">
+    <div class="col-sm-6 col-md-4 col-lg-4 animated">
       <div class="thumbnail">
         <img src="../img/countdown.png" alt="...">
         <div class="caption">
@@ -303,14 +339,14 @@ using Google Pie Charts. </p> <p>
           <p>Let the countdown begin to welcome New Year 2017! tic toc!</p>
           Technology: <span class="badge">JavaScript</span> <span class="badge">jQuery</span> <span class="badge">html</span> <span class="badge">css</span> <span class="badge">bootstrap</span> <br/>
           <br/>
-        <p><a href="/Nyc" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/NewYearCountdown" target="_blank" class="btn btn-default" role="button">Source Code</a></p>
+        <p><a href="http://jayjariwala.com/Nyc" target="_blank" class="btn btn-primary" role="button">View Project</a> <a href="https://github.com/jayjariwala/NewYearCountdown" target="_blank" class="btn btn-default" role="button">Source Code</a></p>
         </div>
       </div>
     </div>
 
 
 
-                  <div class="col-sm-6 col-md-4 col-lg-4">
+                  <div class="col-sm-6 col-md-4 col-lg-4 animated">
                       <div class="thumbnail">
                         <img src="../img/filesize.png" alt="...">
                         <div class="caption">
