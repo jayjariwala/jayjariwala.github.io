@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jay Jariwala</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="bootstap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <script src="bootstap/js/jquery-3.2.1.min.js"></script>
+    <script src="bootstap/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.scrollToTop').fadeOut();
+      $(window).scroll(function(event){
+
+        if ($(this).scrollTop() > 100)
+        {
+			       $('.scrollToTop').fadeIn();
+		    }
+      else {
+			     $('.scrollToTop').fadeOut();
+		    }
+
+        var scroll = $(window).scrollTop();
+        if (scroll > 30) {
+          console.log(scroll);
+          $( '.navbar-fixed-top' ).each(function () {
+            this.style.setProperty( 'background-color','rgba(0,0,0,0.3)', 'important' );
+          });
+          $('.brand').each(function(){
+            this.style.setProperty('border','2px solid rgba(255,255,255,0.5)')
+          })
+        }
+        if (scroll < 30) {
+          $( '.navbar-fixed-top' ).each(function () {
+            this.style.setProperty( 'background-color','rgba(0,0,0,0.0)', 'important' );
+          });
+          $('.brand').each(function(){
+            this.style.setProperty('border','3px solid rgba(0,0,0,0.5)')
+          })
+        }
+
+	   });
+	//Click event to scroll to top
+	     $('.scrollToTop').click(function(){
+		       $('html, body').animate({scrollTop : 0},800);
+		     return false;
+	      });
+
+        $('a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+      return false;
+  });
+
+
+
+
+});
+
+    </script>
+  </head>
+  <body>
+    <div class="home" id="home">
+      <div class="hero-container">
+        <div class="home_section1">
+        </div>
+        <div class="home_section2">
+        </div>
+        <div class="black-overlay">
+
+          <nav class="navbar navbar-default ">
+<div class="container-fluid navbar-fixed-top">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="assets/img/logo.jpg" width="40px" class="brand" /></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#aboutme">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+
+          <div class="introduction" >
+            <h1><span style="color:white;  text-shadow: 2px 2px #c0392b;">Jay Ja</span><span style="color:white;  text-shadow: 2px 2px #363795;">riwala</span></h1>
+           <div class="line"></div>
+            <p>
+            {Full-Stack Developer}</span>
+            </p>
+          </div>
+          <div class="work_icons">
+            <a href="#"><i class="fa fa-free-code-camp"></i></a>
+            <a href="#"><i class="fa fa-codepen"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-free-code-camp"></i></a>
+          </div>
+          <div class="scroll">
+            <div class="scrollbox">
+            </div>
+            <p>
+              Scroll
+            </p>
+            <div class="down">
+              ↓
+            </div>
+          </div>
+          <a href="#"><span class="fa fa-arrow-up scrollToTop"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="aboutme" id="aboutme">
+      <div class="aboutme_container ">
+        <div class="container">
+          <div class="box1 box">
+            <div class="number_container">
+              01.
+            </div>
+            <div class="box-text"><h1 class="heading">About Me</h1><p>"I am what I create"</p></div>
+              <img src="assets/img/mac.png" class="laptop img img-responsive" width="450px">
+          </div>
+        </div>
+
+        <div class="container about_text">
+          <div class="pic_intro">
+            <div class="row">
+              <div class="col-sm-4 picture">
+                <img src="assets/img/me.jpg" class="me_pic"/>
+              </div>
+              <div class="col-sm-8 text-me-contain">
+                <p>
+                  <span class="hi">Hi!</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbnail_container">
+            <div class="row">
+              <div class="thumb1 col-sm-4">
+                <i class="fa fa-graduation-cap fa-2x fa-about"></i>
+                <h3>Education</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="thumb-logo-container gtu">
+                </div>
+                <div class="thumb-logo-container fdu">
+                </div>
+              </div>
+              <div class="thumb2 col-sm-4">
+                <i class="fa fa-suitcase fa-2x fa-about"></i>
+                <h3>Internship</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="thumb-logo-container tb">
+                </div>
+              </div>
+              <div class="thumb3 col-sm-4">
+                <i class="fa fa-rocket fa-2x fa-about"></i>
+                <h3>Skills</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="thumb-logo-container mongo">
+                </div>
+                <div class="thumb-logo-container express">
+                </div>
+                <div class="thumb-logo-container angular">
+                </div>
+                <div class="thumb-logo-container node">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="download">
+            <btn class="btn btn-default ">View Resume</btn>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div class="work" id="projects">
+
+        <div class="work_box">
+          <div class="work_text">
+            <h1>Projects</h1>
+            <p>
+              Think - Create - Improve
+            </p>
+          </div>
+          <div class="work_num">
+            02.
+          </div>
+        </div>
+
+        <div class="projects">
+
+          <!-- Tab panes -->
+
+    <div class="project_container">
+      <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active text-center"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Front-End</a></li>
+          <li role="presentation" class="text-center"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Back-End</a></li>
+          <li role="presentation" class="text-center"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Full-Stack</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="home">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">https://google.com</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/Psd_to_web_project1.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Random Quotes</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                <btn class="btn btn-primary"> View Project</btn> <btn class="btn btn-default">Source Code</btn>
+                <div class="badge_container">
+                  <span class="badge">html</span><span class="badge">html</span><span class="badge">html</span><span class="badge">html</span><span class="badge">html</span><span class="badge">html</span><span class="badge">html</span>
+                  <span class="badge">html</span>
+                  <span class="badge">html</span>
+                  <span class="badge">html</span>
+                  <span class="badge">html</span>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div role="tabpanel" class="tab-pane" id="profile">sup?</div>
+          <div role="tabpanel" class="tab-pane" id="messages">good</div>
+          <div role="tabpanel" class="tab-pane" id="settings">...</div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    <div class="contectme" id="connect">
+      <svg class="triangle triangle-about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="presentation" preserveAspectRatio="none"><path class="triangle-path" d="M0 0l253 500L500 0H0z"></path></svg>
+      <div class="container ">
+
+        <div class="contact_form">
+          <div class="contact_form_container">
+            <div class="text-center">
+              <div class="number_three contact_heading">
+                03.
+              </div>
+              <div class="contact_heading">
+              Contact
+              </div>
+              <form class="text-center cont_form">
+                <input type="text" placeholder="Your Name" /> <br/>
+                <input type="text" placeholder="Email"/> </br/>
+                <textarea rows="4" cols="50" placeholder="Message"></textarea>
+                <br/>
+                  <btn class="btn btn-default send-button">Send</btn>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 copyright">
+            Designed & Code © 2017 Jay Jariwala
+          </div>
+          <div class="col-sm-4 social">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
