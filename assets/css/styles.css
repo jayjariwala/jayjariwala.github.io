@@ -718,7 +718,22 @@ width: 93%;
 }
 
 @media (max-width:690px) {
-
+  .heading
+  {
+    font-size: 65px;
+  }
+  .work_text h1
+  {
+    font-size: 65px;
+  }
+  .url_text
+  {
+    font-size: 8px;
+  }
+  .contact_heading
+  {
+    font-size: 65px;
+  }
   .introduction h1
   {
     font-size: 40px;
