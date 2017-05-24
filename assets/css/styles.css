@@ -489,6 +489,10 @@ letter-spacing: 2px;
   height: 100%;
 
 }
+.bowser_body > img
+{
+  width: 100%;
+}
 .button_container
 {
   margin-left: 5px;

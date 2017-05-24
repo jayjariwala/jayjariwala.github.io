@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="bootstap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fa/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </script>
+    <script type="text/javascript">
+    function downloadJSAtOnload() {
+      var element = document.createElement("script");
+      element.src = "assets/scripts/require.js";
+      document.body.appendChild(element);
+    }
+    if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+</script>
   </head>
   <body>
     <div class="home" id="home">
@@ -806,5 +817,6 @@
       </div>
     </div>
     <script data-main="assets/scripts/main.js" src="assets/scripts/require.js"></script>
+
   </body>
 </html>
