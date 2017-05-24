@@ -1,317 +1,862 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="img/jlogo.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Jay Jariwala</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="bootstap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <script src="bootstap/js/jquery-3.2.1.min.js"></script>
+    <script src="bootstap/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.scrollToTop').fadeOut();
+      $(window).scroll(function(event){
 
-  ga('create', 'UA-90426553-1', 'auto');
-  ga('send', 'pageview');
+        if ($(this).scrollTop() > 100)
+        {
+			       $('.scrollToTop').fadeIn();
+		    }
+      else {
+			     $('.scrollToTop').fadeOut();
+		    }
 
-</script>
-<script>
-$(function() {
-   $("#one").addClass("progress-bar-purple");
-   $("#two").addClass("progress-bar-orange");
+        var scroll = $(window).scrollTop();
+        if (scroll > 30) {
+          console.log(scroll);
+          $( '.navbar-fixed-top' ).each(function () {
+            this.style.setProperty( 'background-color','rgba(0,0,0,0.3)', 'important' );
+          });
+          $('.brand').each(function(){
+            this.style.setProperty('border','2px solid rgba(255,255,255,0.5)')
+          })
+        }
+        if (scroll < 30) {
+          $( '.navbar-fixed-top' ).each(function () {
+            this.style.setProperty( 'background-color','rgba(0,0,0,0.0)', 'important' );
+          });
+          $('.brand').each(function(){
+            this.style.setProperty('border','3px solid rgba(0,0,0,0.5)')
+          })
+        }
+
+	   });
+	//Click event to scroll to top
+	     $('.scrollToTop').click(function(){
+		       $('html, body').animate({scrollTop : 0},800);
+		     return false;
+	      });
+
+        $('.nav.navbar-nav.navbar-right li a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+      return false;
+  });
+
+
+
+
 });
-</script>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
-    <link href="font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 
-
-
-    <link href="css/animate.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    </script>
   </head>
   <body>
+    <div class="home" id="home">
+      <div class="hero-container">
+        <div class="home_section1">
+        </div>
+        <div class="home_section2">
+        </div>
+        <div class="black-overlay">
 
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!---- Dont do anything above this code-->
-
-    <div class="container-fluid">
-
-       <div class="row">
-
-
-
-        <div class="main col-lg-12 ">
-  <!--      	<ul class="nav nav-tabs " id="abc">
-
-  	  <li class="active"><a data-toggle="tab" href="#home" ><i class="fa fa-user"></i> &nbsp;Profile</a></li>
-  	  <li><a href="Portfolio.html" data-toggle="tab" class="a"><i class="fa fa-edit"></i> &nbsp;Portfolio</a></li>
-    <li><a data-toggle="tab" href="#menu2" class="a"><i class="fa fa-male"> &nbsp;</i>About Me</a></li>
-    <li><a data-toggle="tab" href="#menu3" class="a"><i class="fa fa-comment"></i> &nbsp;Contact Me</a></li>
-  </ul>
-  -->
-  <div class="navbar-header">
-  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="fa fa-navicon"></span>
-      </button>
+          <nav class="navbar navbar-default ">
+<div class="container-fluid navbar-fixed-top">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="assets/img/logo.jpg" width="40px" class="brand" /></a>
   </div>
 
-  <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="visible-sm visible-xs nav navbar-nav">
-  	  <li role="presentation" class="active" ><a href="/"><i class="fa fa-user" style="color:black"></i>&nbsp;<span style="color:black;">Profile</span></a></li>
- 	 <li role="presentation" class="a"><a href="/Portfolio"><i class="fa fa-edit"></i>&nbsp;Portfolio</a></li>
- 	 <li role="presentation" class="a"><a href="/AboutMe"><i class="fa fa-male"> &nbsp;</i>About Me</a></li>
- 	  <li role="presentation" class="a"><a href="/ContactMe" ><i class="fa fa-comment"></i> &nbsp;Contact Me</a></li>
-
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#aboutme">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
     </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
 
-</div>
+          <div class="introduction" >
+            <h1><span style="color:white;  text-shadow: 2px 2px #c0392b;">Jay Ja</span><span style="color:white;  text-shadow: 2px 2px #363795;">riwala</span></h1>
+           <div class="line"></div>
+            <p>
+            {Full-Stack Developer}</span>
+            </p>
+          </div>
+          <div class="work_icons">
+            <a href="http://codepen.io/jayjariwala/" target="_blank"><i class="fa fa-codepen"></i></a>
+            <a href="https://github.com/jayjariwala/" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.freecodecamp.com/jayjariwala" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+            <a href="http://blog.jayjariwala.me" target="_blank"><i class="fa fa-pencil-square-o"></i></a>
+          </div>
+          <div class="scroll">
+            <div class="scrollbox">
+            </div>
+            <p>
+              Scroll
+            </p>
+            <div class="down">
+              ↓
+            </div>
+          </div>
+          <a href="#"><span class="fa fa-arrow-up scrollToTop"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="aboutme" id="aboutme">
+      <div class="aboutme_container ">
+        <div class="container">
+          <div class="box1 box">
+            <div class="number_container">
+              01.
+            </div>
+            <div class="box-text"><h1 class="heading">About Me</h1><p>"I am what I create"</p></div>
+              <img src="assets/img/mac.png" class="laptop img img-responsive" width="450px">
+          </div>
+        </div>
 
-
-  <ul class="nav nav-tabs visible-lg visible-md">
-
-  <li role="presentation" class="active"><a href="/"><i class="fa fa-user"></i>&nbsp;Profile</a></li>
-  <li role="presentation" class="a"><a href="/Portfolio"><i class="fa fa-edit"></i>&nbsp;Portfolio</a></li>
-  <li role="presentation" class="a"><a href="/AboutMe"><i class="fa fa-male"> &nbsp;</i>About Me</a></li>
-   <li role="presentation" class="a"><a href="/ContactMe" ><i class="fa fa-comment"></i> &nbsp;Contact Me</a></li>
-
-	</ul>
-
-
-
-        	<div class="profile ">
+        <div class="container about_text">
+          <div class="pic_intro">
             <div class="row">
-            	<div class="col-lg-4 ">
-
-              <center> <img src="img/jayjariwala.jpg" class="img-responsive img-circle animated fadeIn " height="160em" width="160em"></center>
-
-
-
-<div class="social">
-  <center>
-    <a href="https://codepen.io/jayjariwala/" target="_blank"><i  class="fa fa-codepen fa-lg"></i></a> <a href="https://github.com/jayjariwala" target="_blank"><i  class="fa fa-github fa-lg"></i></a> <a href="https://twitter.com/_deadlocked" target="_blank"><i class="fa fa-twitter fa-lg"></i></a> <a href="https://www.facebook.com/jay.jariwala.5" target="_blank"> <i class="fa fa-facebook fa-lg"></i></a>
-  </center>
-
-</div>
-                </div>
-
-        			 <div class="col-lg-7 ">
-                   		<h3 class="well intro animated lightSpeedIn"><center>Jay Jariwala</center></h3>
-
-                       <blockquote> <h3 class="animated flip"><center><i>"I code everyday"</i></center></h3></blockquote>
-                    </div>
-                    <div class="col-lg-1 ">
-
-                         </div>
-
-
-                    <div class="col-lg-4 biodata" style="margin-left:50px;">
-
-                        <h4 ><i class="fa fa-user fe animated bounceIn"></i><span class="title"> <b>Profile</b> </span></h4>
-                       <b> Name:</b> Jay  <br/>
-                       <b> Last Name:</b> Jariwala <br/>
-                        <b>Specialty:</b> Fullstack Developer <br/>
-                       <b> Age:</b> 24 <br/>
-                       <b> From:</b> India <br/>
-                       <b> Lives In:</b> NJ,USA
-
-                       <h4 ><i class="fa fa-rocket fe animated bounceIn"></i></i> <span class="title"><b>Skills</b></span></h4>
-
-                      <span class="badge">Html</span>
-                      <span class="badge">css</span>
-                      <span class="badge">Bootstrap</span>
-                      <span class="badge">Java</span>
-                      <span class="badge">Maven</span>
-                      <span class="badge">Jsp, Servlet</span>
-                      <span class="badge">Jax-rs</span>
-                      <span class="badge">Jersey</span>
-                      <span class="badge">MVC</span>
-                      <span class="badge">JavaScript</span>
-                      <span class="badge">jQuery</span>
-                      <span class="badge">Node.js</span>
-                      <span class="badge">Express.js</span>
-                      <span class="badge">C</span>
-                      <span class="badge">C++</span>
-                      <span class="badge">Assembly Language</span>
-                      <span class="badge">MySql</span>
-                      <span class="badge">oracle</span>
-                      <span class="badge">Git</span>
-                      <span class="badge">SVN</span>
-                      <span class="badge">Windows</span>
-
-            <h4 ><i class="fa fa-cogs fe animated bounceIn"></i></i> <span class="title"><b>Tools</b></span></h4>
-                  <span class="badge">eclipse</span>
-                  <span class="badge">NetBeans</span>
-                  <span class="badge">Atom</span>
-                    <span class="badge">Turbo C/ C++</span>
-                  <span class="badge">linux Terminal</span>
-                  <span class="badge">Code Blocks</span>
-                  <span class="badge">Photoshop</span>
-                  <span class="badge">Dreamweaver</span>
-                  <span class="badge">MS Office</span>
-
-                    </div>
-                    <div class="col-lg-6 skills " style="margin-top:2em">
-
-                      <h4 style="color:darkblue"><i class="fa fa-graduation-cap fe animated bounceIn"></i> <span class="title"><b>Education</b></span></h4>
-                        <u><b>Master of Science in Computer Science</b></u><span class="graduate">May 16, 2017</span>
-                      <br/>Fairleigh Dickinson University, Teaneck, NJ.</br>
-                      <br/>
-
-                     <b>Result</b>
-                      <ul>
-                        <li>
-                          4th Semester GPA: 4.0
-                        </li>
-                        <li>
-                          3rd Semester GPA: 4.0
-                        </li>
-                        <li>
-                          2nd Semester GPA: 4.0
-                        </li>
-                        <li>
-                          1st Semester GPA: 3.86
-                        </li>
-                      </ul>
-                      <b>Relevent Cources</b>
-                      Database Managment, Operating Systems, Java and Internet, Assembley Language, Computer Architacture, Mobile Programming, System Programming, Software Engineering.
-                      <br/><br/>
-
-                      <u><b>Bachelor of Engineering in Information Technology</b></u><span class="graduate">June 2014</span>
-                    <br/> C G Patel Institute of Technology
-
-
-
-</div>
-
-
-
-
-
-		</div>
-	<br/>
-        <div class="work">
-
-                        <h4 style="color:darkblue"><i class="fa fa-laptop fe animated bounceIn"></i> <span class="title"><b>Work Experience</b></span></h4>
-                        <u><b>Intern at Today's Business</b></u> (Fall 2016 )
-                        <ul>
-                          <li>
-                            <b>Position:</b> Digital development Intern
-                          </li>
-                        <li>
-                          <b>Responsibilites:</b>
-                        <ul>
-                          <li>
-                            Learn how to structure pages of content, business listings, and website files to ensure
-     best, SEO practices.</li>
-    <li> Learn how to apply their existing programming savvy to actual assist with making
-     updates to client websites and build landing pages from the ground up </li>
-     <li>Assist with the project management, content, and development of websites on multiple
-     platforms</li>
-    <li> Collect and analyze social media campaign analytics reports</li>
-    <li> Assist in creating social media layout design</li>
-    <li> Design and build Facebook Tabs, Landing Pages, and Mobile Applications</li>
-    <li> Assist with advertising campaigns and branding through social media outlets</li>
-    <li> Assist in creating custom tabs for clients’ social media accounts</li>
-  <li>   Assist in personalizing graphic media</li>
-  <li>   Shadow and learn basic understanding of SEO/SEM campaigns</li>
-  <li>   Develop a web analysis of two Today’s Business clients to present at the end of the
-     semester with areas of improvement and suggestions</li>
-
-                        </ul>
-                        </li>
-                        </ul>
-
-
-                        <u><b>Fairleigh Dickinson University</b></u>
-                        <ul>
-                          <li>
-                            <b>Position:</b> Orientation Leader @Fall 2016
-                          </li>
-                        <li>
-                          <b>Duties:</b>
-                        <ul>
-                          <li>
-                            Orientation Leader Training Program, assting with airport pick-ups, Medical clearance</li>
-                        <li>implementing programs during International Student Orientation etc.</li>
-
-                        </ul>
-                        </li>
-                        </ul>
-                        <u><b>Fairleigh Dickinson University</b></u>
-                        <ul>
-                          <li>
-                            <b>Position:</b> Hall Security Assistant @Fall 2016
-                          </li>
-                        <li>
-                          <b>Duties:</b>
-                        <ul>
-                          <li>
-                          securing student residance hall and taking care of students safty </li>
-
-                        </ul>
-                        </li>
-                        </ul>
-
-
-
-
-                        <u><b>Fairleigh Dickinson University</b></u>
-                        <ul>
-                          <li>
-                            <b>Position:</b> Orientation copy Assistant @Spring 2016
-                          </li>
-                        <li>
-                          <b>Duties:</b>
-                        <ul>
-                          <li>
-                            Copied, collated and organized documents for personalized folders for 250 new international students</li>
-
-                        </ul>
-                        </li>
-                        </ul>
-
-
-                      </div>
-
-<form method="get" action="resume_JayJariwala.pdf" target="_blank">
-  <center>
-  </br/>
-    <button class="btn btn-primary" type="submit">Download Resume</button>
-  </center>
-</form>
-
-
-</br/>
- </div>
-
-
+              <div class="col-sm-4 picture">
+                <img src="assets/img/me.jpg" class="me_pic"/>
+              </div>
+              <div class="col-sm-8 text-me-contain">
+                <p>
+                  <span class="hi">Hi!</span> How is it going? I'm Jay, a fullstack web developer and linux hobbyist living in New Jersey, USA. I enjoy building web applications and solving algorithm chellenges. Currently, I am taking a number of online courses to expand my frontend and backend knowledge. when I am not coding, I am usually reading a book, drinking coffee, or roaming in nature.
+                </p>
               </div>
             </div>
+          </div>
+          <div class="thumbnail_container">
+            <div class="row">
+              <div class="thumb1 col-sm-4">
+                <i class="fa fa-graduation-cap fa-2x fa-about"></i>
+                <h3>Education</h3>
+                <p>
+                  <u>Master of Science in Computer Science</u> - May 2017 <br/>
+                  <span>Fairleigh Dickinson University, Teaneck, NJ</span> <br/>
+                  <u>Cummulative GPA</u> - 4.0 <br/>
+                  <u>Relevent Courses</u> - <span>Database Managment, Operating Systems, Java and Internet, Assembley Language, Computer Architacture, Mobile Programming, System Programming, Software Engineering. </span><br/>
+                  <u>Bachelor of Engineering in Information Technology</u> - June 2014 <br/>
+                  <span>Gujarat Technological University, Gujarat, India</span> <br/>
+
+                </p>
+                <div class="thumb-logo-container gtu">
+                </div>
+                <div class="thumb-logo-container fdu">
+                </div>
+              </div>
+              <div class="thumb2 col-sm-4">
+                <i class="fa fa-suitcase fa-2x fa-about"></i>
+                <h3>Internship</h3>
+                <p>
+                  <u>Today's Business</u> Aug 2016 - Dec 2016 <br/>
+                  <u>Outcomes</u> • Assisted with the project management, content, and development of websites on multiple platforms
+<br/>• Built a complete website for the company's client using Wordpress as a content management system.
+<br/>• Learned how to structure pages of content, business listings, and website files to ensure best, SEO practices.
+<br/>• Assisted with making updates to client websites and build landing pages from the ground up
+<br/>
+                </p>
+                <div class="thumb-logo-container tb">
+                </div>
+              </div>
+              <div class="thumb3 col-sm-4">
+                <i class="fa fa-rocket fa-2x fa-about"></i>
+                <h3>Skills</h3>
+                <p>
+                  <u>JAVA</u> - <span>JSP, Servlet, JDBC, Sockets, Restful Web Services, Jersey, Jax-rs, Swing, Applets, Android, Multithreading</span> <br/>
+                  <u>JavaScript</u> - <span>Vanilla Javascript, Node.js, Express.js, NPM, Ajax, Jquery, Chart.js </span> <br/>
+                  <u>Database</u> - <span>MongoDB, Oracle, MySQL</span> <br/>
+                  <u>Development</u> - <span>Heroku, Openshift, Maven, git, svn</span> <br/>
+                  <u>Linux</u> - <span>Terminal, Shell Scripting, Grep, Sed, Awk </span> <br/>
+                  <u>Design</u> - <span>Heroku, Openshift, Maven, git, svn, Linux/windows, Terminal, OAuth</span> <br/>
+                  <u>Related Skills</u> - <span>Object-Oriented Design Pattern, Software Development Life Cycle, Agile Software Development</span>
+                </p>
+                <div class="thumb-logo-container mongo">
+                </div>
+                <div class="thumb-logo-container express">
+                </div>
+                <div class="thumb-logo-container angular">
+                </div>
+                <div class="thumb-logo-container node">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="download">
+            <btn class="btn btn-default ">View Resume</btn>
+          </div>
+
         </div>
-  </div>
-  </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div class="work" id="projects">
+
+        <div class="work_box">
+          <div class="work_text">
+            <h1>Projects</h1>
+            <p>
+              Think - Create - Improve
+            </p>
+          </div>
+          <div class="work_num">
+            02.
+          </div>
+        </div>
+
+        <div class="projects">
+
+          <!-- Tab panes -->
+
+    <div class="project_container">
+      <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class=" text-center"><a href="#frontend" aria-controls="home" role="tab" data-toggle="tab">Front-End</a></li>
+          <li role="presentation" class="text-center"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Back-End</a></li>
+          <li role="presentation" class="active text-center"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Full-Stack</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane " id="frontend">
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">http://jayjariwala.me/quotes/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/quotes.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Random Quotes</h1>
+                <p>get inspirational quote on every click, enjoy sharing it with your friends on twitter</p>
+                <a href="http://jayjariwala.me/quotes/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/RandomQuoteMachine" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Html</span>
+                  <span class="badge">Css</span>
+                  <span class="badge">javascript</span>
+                  <span class="badge">Custom API</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">http://jayjariwala.me/WikiHunt/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/wikimedia.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Wiki Hunt</h1>
+                <p>Search wikipeadia Articles using Wikimedia API</p>
+                <a href="http://jayjariwala.me/WikiHunt/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/wikihunt" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Html</span>
+                  <span class="badge">Css</span>
+                  <span class="badge">javascript</span>
+                  <span class="badge">wikimedia API</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">http://jayjariwala.me/Weather/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/weather.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Weather App</h1>
+                <p>Application which shows current weather according to user's geolocation</p>
+                <a href="http://jayjariwala.me/Weather/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/WeatherApp" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Html</span>
+                  <span class="badge">Css</span>
+                  <span class="badge">javascript</span>
+                  <span class="badge">Open Weather API</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">http://jayjariwala.me/JSDrumKit/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/drumkit.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>JS Drumkit</h1>
+                <p>Application that lets you play drumkit using keyboard</p>
+                <a href="http://jayjariwala.me/Weather/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/JSDrumKit" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Html</span>
+                  <span class="badge">Css</span>
+                  <span class="badge">Sass</span>
+                  <span class="badge">Vanilla Javascript</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">http://jayjariwala.me/JSClock/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/jsclock.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>JS Clock</h1>
+                <p>Analog clock build using vanilla Javascript</p>
+                <a href="http://jayjariwala.me/JSClock/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/JSClock" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Html</span>
+                  <span class="badge">Css</span>
+                  <span class="badge">Sass</span>
+                  <span class="badge">Vanilla Javascript</span>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+          <div role="tabpanel" class="tab-pane" id="profile">
+
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">https://ffctiny.herokuapp.com/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/tinyurl.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Tiny URL</h1>
+                <p>A microservice that shorten the long URL.</p>
+                <a href="https://ffctiny.herokuapp.com/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/RequestHeader" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Express.js</span>
+                  <span class="badge">Mongodb</span>
+                  <span class="badge">html</span>
+                  <span class="badge">css</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">https://imgsearch-freecc.herokuapp.com/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/imagesearch.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Image Search</h1>
+                <p>Search for an image and get the JSON data for that image</p>
+                <a href="https://imgsearch-freecc.herokuapp.com/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/ImageSearch" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Express.js</span>
+                  <span class="badge">Fliker API</span>
+                  <span class="badge">Mongodb</span>
+                  <span class="badge">html</span>
+                  <span class="badge">css</span>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">http://tmicorservice-jayjariwala.rhcloud.com/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/timestamp.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Time Stamp</h1>
+                <p>API which converts Natural timestamp to unix timestamp and vice versa</p>
+                <a href="http://tmicorservice-jayjariwala.rhcloud.com/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/Tmicroservice" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Java</span>
+                  <span class="badge">Jsp</span>
+                  <span class="badge">Jax-rs</span>
+                  <span class="badge">Jersey</span>
+                  <span class="badge">Html</span>
+                  <span class="badge">css</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">https://fccfile-size.herokuapp.com/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/filesize.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>File Size Service</h1>
+                <p>How big is your file? know the size of your file using this Microservice</p>
+                <a href="https://fccfile-size.herokuapp.com/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/FileMetaData" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Express.js</span>
+                  <span class="badge">html</span>
+                  <span class="badge">css</span>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+          <div role="tabpanel" class="tab-pane active" id="messages">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">https://bookwormclub.herokuapp.com/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/bookclub.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Book Club</h1>
+                <p>Book Trading Club is a place where you can trade your books with other people. Uses the Google Books API to allow users to search and add books for trade </p>
+                <a href="https://bookwormclub.herokuapp.com/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/Bookworm" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Express.js</span>
+                  <span class="badge">Mongodb</span>
+                  <span class="badge">Google Book-API</span>
+                  <span class="badge">html</span>
+                  <span class="badge">css</span>
+                  <span class="badge">Bootstap</span>
+                  <span class="badge">jquery</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">https://lolterest.herokuapp.com/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/pintrestClone.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Lolterest</h1>
+                <p>A Pinterest style picture sharing site. OAuth allows users to log in using their twitter account. A user can add and delete pictures as well as like/unlike the shared pictures</p>
+                <a href="https://lolterest.herokuapp.com/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/Trollterest" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Express.js</span>
+                  <span class="badge">Mongodb</span>
+                  <span class="badge">Blockit.js</span>
+                  <span class="badge">OAuth</span>
+                  <span class="badge">html</span>
+                  <span class="badge">css</span>
+                  <span class="badge">Bootstap</span>
+                  <span class="badge">jquery</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">http://voteplus-jayjariwala.rhcloud.com/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/votingApp.png" class="img img-responsive" alt="Project random quote">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Voteitup</h1>
+                <p>Voteitup! App allows users to log in, create polls and share them with others. The app displays the poll result in graphical format using Google Pie Charts.</p>
+                <a href="http://voteplus-jayjariwala.rhcloud.com/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/voteitup" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Java</span>
+                  <span class="badge">Jsp</span>
+                  <span class="badge">Sevlet</span>
+                  <span class="badge">mySql</span>
+                  <span class="badge">Html</span>
+                  <span class="badge">Css</span>
+                  <span class="badge">Bootstap</span>
+                  <span class="badge">jquery</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">http://nightlife-jayjariwala.rhcloud.com</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/nightlife.png" class="img img-responsive" alt="Nightlife Coordination App">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Nightlife Coordination</h1>
+                <p>Search bars near by your area and see how many people are visitng tonight</p>
+                <a href="http://nightlife-jayjariwala.rhcloud.com" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/NightLife" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Java</span>
+                  <span class="badge">Jsp</span>
+                  <span class="badge">Sevlet</span>
+                  <span class="badge">mySql</span>
+                  <span class="badge">Html</span>
+                  <span class="badge">Css</span>
+                  <span class="badge">Bootstap</span>
+                  <span class="badge">jquery</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="bowser_container">
+                  <div class="bowser_header">
+                    <div class="button_container">
+                          <div class="minmize_button w_button">
+                          </div>
+                          <div class="maximize_button w_button">
+                          </div>
+                          <div class="close_button w_button">
+                          </div>
+                        </div>
+                        <div class="url_bar">
+                          <i class="fa fa-plus"> |</i>
+                          <span class="url_text">https://to-do-task.herokuapp.com/</span>
+                          <i class="fa fa-refresh"> </i>
+                        </div>
+                    </div>
+                    <div class="bowser_body">
+                      <img src="assets/img/todo.png" class="img img-responsive" alt="Nightlife Coordination App">
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-4 project_text_container">
+                <h1>Todo Task</h1>
+                <p>Let this app keeps track of what you want to do today. Check the task complete as you finish them.</p>
+                <a href="https://to-do-task.herokuapp.com/" target="_blank"><btn class="btn btn-primary"> View Project</btn></a> <a href="https://github.com/jayjariwala/TodoTask" target="_blank"> <btn class="btn btn-default">Source Code</btn></a>
+                <div class="badge_container">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">Express.js</span>
+                  <span class="badge">Mongodb</span>
+                  <span class="badge">moment.js</span>
+                  <span class="badge">html</span>
+                  <span class="badge">css</span>
+                  <span class="badge">Bootstap</span>
+                  <span class="badge">jquery</span>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
-  <center><h6 style="color:white">Designed & Coded by Jay Jariwala ©2016</h6></center>
 
+
+        </div>
+
+      </div>
+    </div>
+    <div class="contectme" id="connect">
+      <svg class="triangle triangle-about" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="presentation" preserveAspectRatio="none"><path class="triangle-path" d="M0 0l253 500L500 0H0z"></path></svg>
+      <div class="container ">
+
+        <div class="contact_form">
+          <div class="contact_form_container">
+            <div class="text-center">
+              <div class="number_three contact_heading">
+                03.
+              </div>
+              <div class="contact_heading">
+              Contact
+              </div>
+              <form class="text-center cont_form">
+                <input type="text" placeholder="Your Name" /> <br/>
+                <input type="text" placeholder="Email"/> </br/>
+                <textarea rows="4" cols="50" placeholder="Message"></textarea>
+                <br/>
+                  <btn class="btn btn-default send-button">Send</btn>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 copyright">
+            Designed & Code © 2017 Jay Jariwala
+          </div>
+          <div class="col-sm-4 social">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
