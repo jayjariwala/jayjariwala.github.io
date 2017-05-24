@@ -163,7 +163,7 @@
             </div>
           </div>
           <div class="download">
-            <btn class="btn btn-default ">View Resume</btn>
+            <a href="resume_JayJariwala.pdf" target="_blank"><btn class="btn btn-default ">View Resume</btn></a>
           </div>
 
         </div>
@@ -789,12 +789,12 @@
               <div class="contact_heading">
               Contact
               </div>
-              <form class="text-center cont_form">
-                <input type="text" placeholder="Your Name" /> <br/>
-                <input type="text" placeholder="Email"/> </br/>
-                <textarea rows="4" cols="50" placeholder="Message"></textarea>
+              <form class="text-center cont_form" action="https://formspree.io/jay.jariwala@hotmail.com" method="post" >
+                <input type="text" placeholder="Your Name" required/> <br/>
+                <input type="text" placeholder="Email" name="_replyto" required/> </br/>
+                <textarea rows="4" cols="50" placeholder="Message" required></textarea>
                 <br/>
-                  <btn class="btn btn-default send-button">Send</btn>
+                  <input type="submit" class="btn btn-default send-button">
               </form>
             </div>
           </div>
