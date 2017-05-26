@@ -29,7 +29,6 @@ require(["jquery", "jquery.bootstrap"], function ($) {
 
       var scroll = $(window).scrollTop();
       if (scroll > 30) {
-        console.log(scroll);
         $( '.navbar-fixed-top' ).each(function () {
           this.style.setProperty( 'background-color','rgba(0,0,0,0.3)', 'important' );
         });
