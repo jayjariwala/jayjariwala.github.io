@@ -603,6 +603,10 @@ left:-5px;
   background: -webkit-linear-gradient(to bottom, #b06ab3, #694fca); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #b06ab3, #4568dc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.nav.navbar-nav.navbar-right li > a{
+  color: white !important;
+}
 .nav.navbar-nav.navbar-right li > a:link {
     color: white !important;
     font-family: 'poppins' !important;
