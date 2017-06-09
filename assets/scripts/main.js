@@ -66,14 +66,14 @@ require(["jquery", "jquery.bootstrap","particles"], function ($) {
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 10,
+      "value": 500,
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area":2000
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#005c97"
     },
     "shape": {
       "type": "circle",
@@ -113,13 +113,13 @@ particlesJS("particles-js", {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#ffffff",
+      "color": "#005c97",
       "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 2,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -153,7 +153,7 @@ particlesJS("particles-js", {
         }
       },
       "bubble": {
-        "distance": 400,
+        "distance": 500,
         "size": 40,
         "duration": 2,
         "opacity": 8,
@@ -178,14 +178,14 @@ particlesJS("particles-js", {
 particlesJS("particles-js2", {
   "particles": {
     "number": {
-      "value": 10,
+      "value": 500,
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 1500
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#cb2d3e"
     },
     "shape": {
       "type": "circle",
@@ -225,13 +225,13 @@ particlesJS("particles-js2", {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#ffffff",
+      "color": "#cb2d3e",
       "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 2,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -265,7 +265,7 @@ particlesJS("particles-js2", {
         }
       },
       "bubble": {
-        "distance": 400,
+        "distance": 500,
         "size": 40,
         "duration": 2,
         "opacity": 8,
