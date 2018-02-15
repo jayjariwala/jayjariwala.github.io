@@ -1,0 +1,98 @@
+@font-face 
+{
+	font-family:'againtsnormal';
+	src:url('againts.ttf');
+}
+
+body {
+	margin: 0;
+	padding:0;
+      font-family: 'helvetica neue';
+      font-weight: 200;
+      font-size: 20px;
+    }
+    .words {
+      max-width:500px;
+      margin:50px auto;
+      background:white;
+      border-radius:5px;
+      box-shadow:5px 5px 10px rgba(0,0,0,0.1);
+      padding:1rem 2rem 1rem 5rem;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+      background-size: 100% 3rem;
+      position: relative;
+      line-height:3rem;
+    }
+    p {
+      margin: 0 0 3rem;
+    }
+    .words:before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      top: 0;
+      left: 30px;
+      bottom: 0;
+      border: 1px solid;
+      border-color: transparent #efe4e4;
+    }
+.num
+{
+	color:rgb(25,52,72)
+
+}
+p
+{
+	margin:0;
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
+a:hover
+{
+	text-decoration: underline;
+	text-decoration-color:#ffc600 ;
+}
+.banner__heading
+{
+	margin:0;
+	padding: 0;
+	font-family: againtsnormal;
+	font-size: 6.2rem;
+	color:rgba(25,52,72,0.7);
+	text-align: center;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.small
+{
+	font-size: 4.3rem;
+	font-weight: 100;
+	color: #ffc600
+}
+
+.big
+{
+	font-size: 8.2rem;
+	color: #ffc600;
+}
+
+
+@media screen and (max-width: 550px) {
+	.banner__heading
+	{
+		font-size:2.8rem;
+	}
+	.small
+	{
+		font-size: 1.8rem;
+	}
+	.big
+	{
+		font-size: 3.8rem;
+	}
+}

@@ -21,8 +21,6 @@
     $( document ).ready(function() {
       $.getJSON('http://ipinfo.io', function(location){
         loc=location.loc;
-
-
         var city,area,state,country;
           $.getJSON("http://maps.googleapis.com/maps/api/geocode/json?latlng="+loc+"&sensor=false",function(data){
          var items=[data];
@@ -59,7 +57,6 @@
           var mintutes=d.getMinutes();
           var hour=d.getHours();
           var second=d.getSeconds();
-
 
           $(".time").html(""+hour+":"+mintutes+":"+second);
           setTimeout(function()
