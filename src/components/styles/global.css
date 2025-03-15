@@ -1,0 +1,120 @@
+@value breakpoints: "./breakpoint.css";
+@value largest from breakpoints;
+
+/** Universal Reset **/
+:root {
+  --black: #000000;
+  --grey: #665945;
+  --purple-dark: #a015f8;
+  --purple-light: #cc38ee;
+  --blue: #5b0fe9;
+  --pink-dark: #f160ec;
+  --pink-light: #f790dd;
+  --white: #f9f3f9;
+  --yellow: #f1ff18;
+  --dark-sky: #022449;
+  --orange-blood:#f27D42;
+  --squirtle:#558DCA;
+  --sky-blue:#96FFFF;
+  --white-grey:#C8EFF9;
+  --font-heading: "roboto", sans-serif;
+  --font-content: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: largest) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #000000;
+  background: var(--dark-sky);
+  background-repeat: no-repeat;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "roboto", sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: var(--orange-blood);
+    display: block;
+    margin: 15px auto;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+h2:hover:after {
+  width: 100px;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  ;
+
+}
+
+.highlight {
+  background-color: var(--sky-blue);
+  text-decoration: underline;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--orange-blood);
+  outline: 1px solid var(--orange-blood);
+}

@@ -1,0 +1,19 @@
+@value breakpoints: "./breakpoint.css";
+@value largest, small, medium from breakpoints;
+
+.layout {
+  position: static;
+  padding: 20px 20px 0px 20px;
+  background-image: url(../../assets/images/patternedBg.svg);
+  background-size: 1500px;
+  background-position-y: center;
+  background-repeat: repeat;
+  font-size: 1.8rem;
+  z-index: -10;
+}
+
+@media only screen and (max-width: small) {
+  .layout {
+    padding: 5px;
+  }
+}
