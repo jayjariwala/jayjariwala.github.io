@@ -10,6 +10,7 @@ import { M6, M2 } from 'components/styles/Margin.module.css';
 import avatarImg from 'assets/images/avatar.png';
 import cvsImg from 'assets/images/cvs.png';
 import fduImg from 'assets/images/fdu_logo.png';
+import jbpvImg from 'assets/images/jbpv.png';
 import sdiImg from 'assets/images/sdi_logo.webp';
 import tausightImg from 'assets/images/tausight_logo.jpeg';
 import gtuImg from 'assets/images/gtuLogo.jpeg';
@@ -42,11 +43,11 @@ const IndexPage = () => {
 				<div className={`${medium} ${styles.introSection} text-center`}>
 					<img className={styles.avatar} src={avatarImg} alt="avatar logo" />
 					<div className={styles.introduction}>
-						<p className={styles.hi}>Hello there!</p>
-						<h1 className={styles.whoAmI}>I am Jay Jariwala. Full Stack JavaScript Developer</h1>
+						<p className={styles.hi}>👋 Hello there! </p>
+						<h1 className={styles.whoAmI}>I am Jay, Software Engineer 🧑‍💻</h1>
 						<div className={styles.subIntro}>
 							<p>
-								As aaaaa tech enthusiast and software engineer, my passion lies in leveraging cutting-edge technology to create solutions that positively
+								As a tech enthusiast and software engineer, my passion lies in leveraging cutting-edge technology to create solutions that positively
 								impact on people's lives. With expertise in healthcare technology, I currently serve as a full stack software engineer at CVS health,
 								having previously contributed to Tausight as a User Interface engineer. I thrive on crafting innovative software to address real-world
 								challenges, aiming to contribute to a tech-driven world that enhances and simplifies the human experience.
@@ -109,7 +110,7 @@ const IndexPage = () => {
 								<ul>
 									<li>
 										<span className={styles.heading}>Programming Languages:</span>
-										<span>JavaScript, TypeScript, Java </span>
+										<span>JavaScript, TypeScript, Java, Python </span>
 									</li>
 									<li>
 										<span className={styles.heading}>Web Frameworks:</span>
@@ -149,6 +150,23 @@ const IndexPage = () => {
 							>
 								<TimelineItem>
 									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2025</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={cvsImg} width={30} alt="cvs logo" />
+										</TimelineDot>
+										<TimelineConnector sx={{ height: '20px' }} />
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>CVS Health</h3>
+										<h4>Sr Software Engineer</h4>
+										<span className={styles.timerange}>March 2025 - Present</span>
+									</TimelineContent>
+								</TimelineItem>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
 										<h4>2022</h4>
 									</TimelineOppositeContent>
 									<TimelineSeparator>
@@ -161,7 +179,7 @@ const IndexPage = () => {
 									<TimelineContent sx={{ py: '12px', px: 2 }}>
 										<h3>CVS Health</h3>
 										<h4>Software Engineer</h4>
-										<span className={styles.timerange}>Oct 2022 - Present</span>
+										<span className={styles.timerange}>Oct 2022 - March 2025</span>
 									</TimelineContent>
 								</TimelineItem>
 								<TimelineItem>
@@ -325,6 +343,22 @@ const IndexPage = () => {
 										<h3>Gujarat Techlogical University</h3>
 										<h4>Bachelors of Engineering (B.E) in Information Technology </h4>
 										<span className={styles.timerange}>Sept 2015 - March 2017</span>
+									</TimelineContent>
+								</TimelineItem>
+								<TimelineItem>
+									<TimelineOppositeContent sx={{ m: 'auto 0' }} align="left" variant="body2">
+										<h4>2010</h4>
+									</TimelineOppositeContent>
+									<TimelineSeparator>
+										<TimelineConnector sx={{ height: '20px' }} />
+										<TimelineDot sx={{ borderWidth: '10px' }}>
+											<img src={jbpvImg} width={30} alt="jbpv logo" />
+										</TimelineDot>
+									</TimelineSeparator>
+									<TimelineContent sx={{ py: '12px', px: 2 }}>
+										<h3>Pravrutti Vidhyalaya</h3>
+										<h4>Secondary and Higher Secondary Education</h4>
+										<span className={styles.timerange}>1998 - 2010</span>
 									</TimelineContent>
 								</TimelineItem>
 							</Timeline>
