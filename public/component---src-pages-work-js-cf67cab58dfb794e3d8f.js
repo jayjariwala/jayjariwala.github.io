@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjayjariwala_com_2023=self.webpackChunkjayjariwala_com_2023||[]).push([[670],{1774:function(e,a,c){c.r(a),c.d(a,{default:function(){return n}});var r=c(6540),l=c(5370);var n=()=>r.createElement(l.P,null,r.createElement("div",{className:"Work-module--page--0a533"},"In progress .. Please check back soon👷🏼"))}}]);
-//# sourceMappingURL=component---src-pages-work-js-cf67cab58dfb794e3d8f.js.map
