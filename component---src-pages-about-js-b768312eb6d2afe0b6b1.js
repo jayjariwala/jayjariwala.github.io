@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjayjariwala_com_2023=self.webpackChunkjayjariwala_com_2023||[]).push([[432],{9434:function(e,t,a){a.r(t),a.d(t,{Head:function(){return l}});var n=a(6540);const l=()=>n.createElement(n.Fragment,null,n.createElement("title",null,"About Me"),n.createElement("meta",{name:"description",content:"Your description"}));t.default=()=>n.createElement("main",null,n.createElement("h1",null,"About me"),n.createElement("p",null,"Hello there! this is a about me page"))}}]);
+//# sourceMappingURL=component---src-pages-about-js-b768312eb6d2afe0b6b1.js.map
