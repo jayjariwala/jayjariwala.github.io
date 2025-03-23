@@ -39,21 +39,21 @@ const Header = ({title}) => {
                 Home
               </Link>
             </li>
-             <li>
+             {/* <li>
               <Link to="#" className={`${Underline}`}>
                 Certifications
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/work" className={`${Underline}`}>
                 Projects
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="#" className={`${Underline}`}>
                 Blog
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
