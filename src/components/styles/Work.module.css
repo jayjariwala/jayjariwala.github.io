@@ -6,3 +6,24 @@
   align-items: center;
   /* height: 300px; */
 }
+
+
+.chipContainer {
+  display: flex;
+  justify-content: left;
+  margin-top: 1rem;
+  align-items: left;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.chip {
+  background-color: var(--white-grey);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+}

@@ -14,6 +14,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { btn, btnPrimary, btnSecondary, btnLg, btnSm, linkBtn, buttonGroup } from 'components/styles/Button.module.css';
 import TextField from '@mui/material/TextField';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 
 const WorkPage = () => {
 	return (
@@ -23,26 +24,36 @@ const WorkPage = () => {
 					<Box sx={{ flexGrow: 1 }}>
 						<Grid container spacing={2}>
 							<Grid item xs={3}>
-								<Card sx={{ maxWidth: 345 }}>
-									<CardActionArea>
-										<CardMedia
-											component="img"
-											height="140"
-											image="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=3857&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-											alt="green iguana"
-										/>
-										<CardContent>
-											<Typography gutterBottom variant="h3" component="div">
-												Project1
-											</Typography>
-
-											<p>
-												lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-											</p>
-										</CardContent>
-									</CardActionArea>
+								<Card sx={{ maxWidth: 345 }} disableFocusRipple={true}>
+									<CardMedia
+										component="img"
+										alt="green iguana"
+										height="220"
+										image="https://jayjariwala.github.io/jayjariwala-archive/assets/img/wikimedia.png"
+									/>
+									<CardContent>
+										<h3>Wikihunt</h3>
+										<p>Search wikipeadia Articles using Wikimedia API</p>
+										<br />
+										<hr />
+										<div className={styles.chipContainer}>
+											<span className={styles.chip}>Html</span>
+											<span className={styles.chip}>css</span>
+											<span className={styles.chip}>javascript</span>
+											<span className={styles.chip}>wikimedia api</span>
+										</div>
+									</CardContent>
 									<CardActions>
-										<button className={`${btn} ${btnSm} ${btnPrimary}`}>Visit</button>
+										<Link
+											to="https://jayjariwala.github.io/jayjariwala-archive/WikiHunt/index.html"
+											target="_blank"
+											className={`${btn} ${btnPrimary} ${btnSm} ${linkBtn} `}
+										>
+											View
+										</Link>
+										<Link to="https://github.com/jayjariwala/wikihunt" target="_blank" className={`${btn} ${btnSecondary} ${btnSm} ${linkBtn} `}>
+											Source Code
+										</Link>
 									</CardActions>
 								</Card>
 							</Grid>
